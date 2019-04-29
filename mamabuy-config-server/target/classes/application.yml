@@ -1,0 +1,32 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/java-faster/mamabuy-config-repo
+          username: 1126164600@qq.com
+          password: lotus938218
+          search-paths: common-config,gateway-config,key-generator-config,stock-service-config,trade-service-config,user-service-config
+    bus:
+      trace:
+        enabled: true
+    stream:
+      kafka:
+        binder:
+          brokers: 106.12.26.193:9092
+          zk-nodes: 106.12.26.193:2181
+          auto-create-topics: true
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://106.12.26.193:8888/eureka
+  instance:
+    ip-address: 106.12.26.193
+    prefer-ip-address: true

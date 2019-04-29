@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.coder520.mamabuyconfigserver.MamabuyConfigServerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.53 sec - in com.coder520.mamabuyconfigserver.MamabuyConfigServerApplicationTests
