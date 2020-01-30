@@ -7,12 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mamabuy-config-server" />
+        <module name="mamabuy-order-server" />
+        <module name="mamabuy-scheduler-service" />
         <module name="mamabuy-service-registry" />
+        <module name="mamabuy-trade-service" />
         <module name="mamabuy-user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mamabu-config-server" target="1.8" />
+      <module name="mamashop-user-server" target="1.8" />
+      <module name="user_login_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

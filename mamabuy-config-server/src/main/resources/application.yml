@@ -26,7 +26,7 @@ management:
 eureka:
   client:
     service-url:
-      defaultZone: http://106.12.26.193:8888/eureka
+      defaultZone: http://114.115.203.161:8889/eureka
   instance:
-    ip-address: 106.12.26.193
+    ip-address: 114.115.203.161
     prefer-ip-address: true

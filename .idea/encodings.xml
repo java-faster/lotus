@@ -3,7 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mamabuy-config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mamabuy-order-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mamabuy-scheduler-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mamabuy-service-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mamabuy-trade-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mamabuy-user-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mamashop-user-server" charset="UTF-8" />
   </component>
 </project>
