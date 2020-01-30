@@ -1,0 +1,183 @@
+15:14:07.650 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:14:12.340 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+15:24:54.210 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:24:58.556 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+15:29:49.134 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:29:53.326 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+15:30:05.692 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:30:05.858 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 2.783 seconds (JVM running for 26.076)
+15:30:10.848 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 28.493 seconds (JVM running for 31.066)
+15:30:24.731 [http-nio-8801-exec-2] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+15:30:24.765 [http-nio-8801-exec-2] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+15:31:01.051 [http-nio-8801-exec-3] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+15:31:01.051 [http-nio-8801-exec-3] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+15:32:28.083 [http-nio-8801-exec-6] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+15:32:28.085 [http-nio-8801-exec-6] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+15:32:28.331 [http-nio-8801-exec-6] DEBUG c.c.m.u.d.U.selectByEmail - <==      Total: 0
+15:32:44.807 [http-nio-8801-exec-7] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+15:32:44.812 [http-nio-8801-exec-7] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+15:32:44.989 [http-nio-8801-exec-7] DEBUG c.c.m.u.d.U.selectByEmail - <==      Total: 0
+15:32:45.160 [http-nio-8801-exec-7] DEBUG c.c.m.u.d.U.insertSelective - ==>  Preparing: insert into t_user ( email, password, nickname ) values ( ?, ?, ? ) 
+15:32:45.160 [http-nio-8801-exec-7] DEBUG c.c.m.u.d.U.insertSelective - ==> Parameters: 2126164600@qq.com(String), $2a$10$loxyEX39eQKjGzAV0ImLV.aWUGB//sK8yZD.L/NGQ6bSuxS0RqLhC(String), 码码购用户jjj(String)
+15:32:45.370 [http-nio-8801-exec-7] INFO  c.c.m.u.s.UserServiceImpl - 用户注册异常
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: io.shardingjdbc.core.exception.ShardingJdbcException: io.shardingjdbc.core.exception.ShardingJdbcException: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may involve com.coder520.mamabuyuserserver.user.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_user      ( email,                       password,                       nickname )       values ( ?,                       ?,                       ? )
+### Cause: io.shardingjdbc.core.exception.ShardingJdbcException: io.shardingjdbc.core.exception.ShardingJdbcException: java.sql.SQLException: Field 'id' doesn't have a default value
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy132.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy134.insertSelective(Unknown Source)
+	at com.coder520.mamabuyuserserver.user.service.UserServiceImpl.register(UserServiceImpl.java:73)
+	at com.coder520.mamabuyuserserver.user.controller.UserController.register(UserController.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:167)
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:80)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: io.shardingjdbc.core.exception.ShardingJdbcException: io.shardingjdbc.core.exception.ShardingJdbcException: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may involve com.coder520.mamabuyuserserver.user.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_user      ( email,                       password,                       nickname )       values ( ?,                       ?,                       ? )
+### Cause: io.shardingjdbc.core.exception.ShardingJdbcException: io.shardingjdbc.core.exception.ShardingJdbcException: java.sql.SQLException: Field 'id' doesn't have a default value
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:200)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 77 common frames omitted
+Caused by: io.shardingjdbc.core.exception.ShardingJdbcException: io.shardingjdbc.core.exception.ShardingJdbcException: java.sql.SQLException: Field 'id' doesn't have a default value
+	at io.shardingjdbc.core.executor.threadlocal.ExecutorExceptionHandler.handleException(ExecutorExceptionHandler.java:61)
+	at io.shardingjdbc.core.executor.ExecutorEngine.execute(ExecutorEngine.java:134)
+	at io.shardingjdbc.core.executor.ExecutorEngine.executePreparedStatement(ExecutorEngine.java:96)
+	at io.shardingjdbc.core.executor.type.prepared.PreparedStatementExecutor.execute(PreparedStatementExecutor.java:93)
+	at io.shardingjdbc.core.jdbc.core.statement.ShardingPreparedStatement.execute(ShardingPreparedStatement.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy176.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	... 83 common frames omitted
+Caused by: io.shardingjdbc.core.exception.ShardingJdbcException: java.sql.SQLException: Field 'id' doesn't have a default value
+	at io.shardingjdbc.core.executor.threadlocal.ExecutorExceptionHandler.handleException(ExecutorExceptionHandler.java:61)
+	at io.shardingjdbc.core.executor.ExecutorEngine.executeInternal(ExecutorEngine.java:188)
+	at io.shardingjdbc.core.executor.ExecutorEngine.syncExecute(ExecutorEngine.java:162)
+	at io.shardingjdbc.core.executor.ExecutorEngine.execute(ExecutorEngine.java:126)
+	... 98 common frames omitted
+Caused by: java.sql.SQLException: Field 'id' doesn't have a default value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3847)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3783)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2447)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2594)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1901)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1193)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:131)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at io.shardingjdbc.core.executor.type.prepared.PreparedStatementExecutor$3.execute(PreparedStatementExecutor.java:97)
+	at io.shardingjdbc.core.executor.type.prepared.PreparedStatementExecutor$3.execute(PreparedStatementExecutor.java:93)
+	at io.shardingjdbc.core.executor.ExecutorEngine.executeInternal(ExecutorEngine.java:182)
+	... 100 common frames omitted
+15:32:45.431 [http-nio-8801-exec-7] INFO  c.c.m.u.s.UserServiceImpl - 2126164600@qq.comhttp-nio-8801-exec-7释放锁
+15:40:03.552 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+15:40:54.674 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+15:52:13.330 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+15:57:15.134 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:00:40.402 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:01:13.112 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:20:54.297 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:22:36.097 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:23:23.346 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:26:21.011 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:27:06.160 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:29:49.204 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:30:40.216 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:33:16.808 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:33:32.881 [main] INFO  c.c.m.MamabuyTradeServerApplication - The following profiles are active: dev
+16:33:33.052 [main] INFO  c.c.m.MamabuyTradeServerApplication - Started MamabuyTradeServerApplication in 1.631 seconds (JVM running for 24.999)
+16:33:38.023 [main] INFO  c.c.m.MamabuyTradeServerApplication - Started MamabuyTradeServerApplication in 27.684 seconds (JVM running for 29.969)

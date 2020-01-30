@@ -1,0 +1,20 @@
+14:43:55.589 [main] INFO  c.c.m.MamabuyUserServerApplication - No active profile set, falling back to default profiles: default
+14:45:04.018 [main] INFO  c.c.m.MamabuyUserServerApplication - No active profile set, falling back to default profiles: default
+14:46:30.221 [main] INFO  c.c.m.MamabuyUserServerApplication - No active profile set, falling back to default profiles: default
+14:48:01.964 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:50:36.578 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:52:59.785 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:53:09.348 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:53:09.509 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 0.276 seconds (JVM running for 15.364)
+14:56:21.068 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:56:30.221 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:56:30.371 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 0.252 seconds (JVM running for 14.656)
+15:00:37.124 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:00:46.267 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:00:46.400 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 0.231 seconds (JVM running for 14.627)
+15:04:47.184 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:04:58.425 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:04:58.549 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 2.13 seconds (JVM running for 22.518)
+15:09:33.984 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:09:46.588 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:09:46.778 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 2.152 seconds (JVM running for 21.582)

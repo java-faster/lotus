@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.mamabuyschedulerservice.stock.dao.StockFlowMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.mamabuyschedulerservice.stock.entity.StockFlow" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="skuid" property="skuid" jdbcType="BIGINT" />
+    <result column="stockbefore" property="stockbefore" jdbcType="INTEGER" />
+    <result column="stockafter" property="stockafter" jdbcType="INTEGER" />
+    <result column="stockchange" property="stockchange" jdbcType="INTEGER" />
+    <result column="lockstockbefore" property="lockstockbefore" jdbcType="INTEGER" />
+    <result column="lockstockafter" property="lockstockafter" jdbcType="INTEGER" />
+    <result column="lockstockchange" property="lockstockchange" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, skuid, stockbefore, stockafter, stockchange, lockstockbefore, lockstockafter, 
+    lockstockchange, create_time, update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.coder520.mamabuyschedulerservice.stock.entity.StockFlowExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_stock_flow
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_stock_flow
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_stock_flow
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.coder520.mamabuyschedulerservice.stock.entity.StockFlowExample" >
+    delete from t_stock_flow
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.coder520.mamabuyschedulerservice.stock.entity.StockFlow" >
+    insert into t_stock_flow (id, skuid, stockbefore, 
+      stockafter, stockchange, lockstockbefore, 
+      lockstockafter, lockstockchange, create_time, 
+      update_time)
+    values (#{id,jdbcType=BIGINT}, #{skuid,jdbcType=BIGINT}, #{stockbefore,jdbcType=INTEGER}, 
+      #{stockafter,jdbcType=INTEGER}, #{stockchange,jdbcType=INTEGER}, #{lockstockbefore,jdbcType=INTEGER}, 
+      #{lockstockafter,jdbcType=INTEGER}, #{lockstockchange,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.mamabuyschedulerservice.stock.entity.StockFlow" >
+    insert into t_stock_flow
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="skuid != null" >
+        skuid,
+      </if>
+      <if test="stockbefore != null" >
+        stockbefore,
+      </if>
+      <if test="stockafter != null" >
+        stockafter,
+      </if>
+      <if test="stockchange != null" >
+        stockchange,
+      </if>
+      <if test="lockstockbefore != null" >
+        lockstockbefore,
+      </if>
+      <if test="lockstockafter != null" >
+        lockstockafter,
+      </if>
+      <if test="lockstockchange != null" >
+        lockstockchange,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="skuid != null" >
+        #{skuid,jdbcType=BIGINT},
+      </if>
+      <if test="stockbefore != null" >
+        #{stockbefore,jdbcType=INTEGER},
+      </if>
+      <if test="stockafter != null" >
+        #{stockafter,jdbcType=INTEGER},
+      </if>
+      <if test="stockchange != null" >
+        #{stockchange,jdbcType=INTEGER},
+      </if>
+      <if test="lockstockbefore != null" >
+        #{lockstockbefore,jdbcType=INTEGER},
+      </if>
+      <if test="lockstockafter != null" >
+        #{lockstockafter,jdbcType=INTEGER},
+      </if>
+      <if test="lockstockchange != null" >
+        #{lockstockchange,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.coder520.mamabuyschedulerservice.stock.entity.StockFlowExample" resultType="java.lang.Integer" >
+    select count(*) from t_stock_flow
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_stock_flow
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.skuid != null" >
+        skuid = #{record.skuid,jdbcType=BIGINT},
+      </if>
+      <if test="record.stockbefore != null" >
+        stockbefore = #{record.stockbefore,jdbcType=INTEGER},
+      </if>
+      <if test="record.stockafter != null" >
+        stockafter = #{record.stockafter,jdbcType=INTEGER},
+      </if>
+      <if test="record.stockchange != null" >
+        stockchange = #{record.stockchange,jdbcType=INTEGER},
+      </if>
+      <if test="record.lockstockbefore != null" >
+        lockstockbefore = #{record.lockstockbefore,jdbcType=INTEGER},
+      </if>
+      <if test="record.lockstockafter != null" >
+        lockstockafter = #{record.lockstockafter,jdbcType=INTEGER},
+      </if>
+      <if test="record.lockstockchange != null" >
+        lockstockchange = #{record.lockstockchange,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_stock_flow
+    set id = #{record.id,jdbcType=BIGINT},
+      skuid = #{record.skuid,jdbcType=BIGINT},
+      stockbefore = #{record.stockbefore,jdbcType=INTEGER},
+      stockafter = #{record.stockafter,jdbcType=INTEGER},
+      stockchange = #{record.stockchange,jdbcType=INTEGER},
+      lockstockbefore = #{record.lockstockbefore,jdbcType=INTEGER},
+      lockstockafter = #{record.lockstockafter,jdbcType=INTEGER},
+      lockstockchange = #{record.lockstockchange,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.mamabuyschedulerservice.stock.entity.StockFlow" >
+    update t_stock_flow
+    <set >
+      <if test="skuid != null" >
+        skuid = #{skuid,jdbcType=BIGINT},
+      </if>
+      <if test="stockbefore != null" >
+        stockbefore = #{stockbefore,jdbcType=INTEGER},
+      </if>
+      <if test="stockafter != null" >
+        stockafter = #{stockafter,jdbcType=INTEGER},
+      </if>
+      <if test="stockchange != null" >
+        stockchange = #{stockchange,jdbcType=INTEGER},
+      </if>
+      <if test="lockstockbefore != null" >
+        lockstockbefore = #{lockstockbefore,jdbcType=INTEGER},
+      </if>
+      <if test="lockstockafter != null" >
+        lockstockafter = #{lockstockafter,jdbcType=INTEGER},
+      </if>
+      <if test="lockstockchange != null" >
+        lockstockchange = #{lockstockchange,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.mamabuyschedulerservice.stock.entity.StockFlow" >
+    update t_stock_flow
+    set skuid = #{skuid,jdbcType=BIGINT},
+      stockbefore = #{stockbefore,jdbcType=INTEGER},
+      stockafter = #{stockafter,jdbcType=INTEGER},
+      stockchange = #{stockchange,jdbcType=INTEGER},
+      lockstockbefore = #{lockstockbefore,jdbcType=INTEGER},
+      lockstockafter = #{lockstockafter,jdbcType=INTEGER},
+      lockstockchange = #{lockstockchange,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

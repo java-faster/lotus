@@ -1,0 +1,12 @@
+08:55:16.139 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+08:55:20.808 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+08:55:34.292 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+08:55:34.453 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 2.0 seconds (JVM running for 29.339)
+08:55:41.204 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 33.16 seconds (JVM running for 36.091)
+10:15:53.916 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+10:15:58.826 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+10:18:20.782 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+10:18:25.663 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+10:18:39.217 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+10:18:39.379 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 2.686 seconds (JVM running for 29.22)
+10:18:45.518 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 32.67 seconds (JVM running for 35.359)

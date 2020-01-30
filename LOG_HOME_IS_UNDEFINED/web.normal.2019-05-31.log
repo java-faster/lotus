@@ -1,0 +1,8 @@
+14:09:37.826 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:10:50.853 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:13:08.482 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:13:22.812 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:13:23.009 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 0.278 seconds (JVM running for 22.291)
+14:30:04.842 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:30:17.839 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+14:30:18.001 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 0.241 seconds (JVM running for 20.07)

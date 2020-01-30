@@ -1,0 +1,112 @@
+15:49:41.334 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:57:38.847 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:58:56.963 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+15:59:47.893 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+16:06:16.481 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+16:11:51.886 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+16:11:56.584 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+16:12:10.097 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+16:12:10.257 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 2.09 seconds (JVM running for 30.709)
+16:12:45.684 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+16:12:48.483 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+16:12:58.419 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+16:12:58.559 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 1.625 seconds (JVM running for 20.549)
+16:13:02.801 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 22.707 seconds (JVM running for 24.79)
+16:13:48.120 [http-nio-8801-exec-1] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+16:13:48.615 [http-nio-8801-exec-1] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+16:13:49.687 [http-nio-8801-exec-1] DEBUG c.c.m.u.d.U.selectByEmail - <==      Total: 1
+16:15:34.461 [http-nio-8801-exec-3] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+16:15:34.465 [http-nio-8801-exec-3] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+16:15:34.985 [http-nio-8801-exec-3] DEBUG c.c.m.u.d.U.selectByEmail - <==      Total: 1
+16:16:33.443 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+16:16:36.398 [localhost-startStop-1] INFO  c.c.m.c.c.HttpSessionConfig - 当前redis地址为:114.115.203.161
+16:16:46.669 [main] INFO  c.c.m.MamabuyUserServerApplication - The following profiles are active: dev
+16:16:46.815 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 1.761 seconds (JVM running for 21.155)
+16:16:50.980 [main] INFO  c.c.m.MamabuyUserServerApplication - Started MamabuyUserServerApplication in 23.275 seconds (JVM running for 25.32)
+16:17:06.416 [http-nio-8801-exec-1] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+16:17:06.803 [http-nio-8801-exec-1] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+16:17:07.483 [http-nio-8801-exec-1] DEBUG c.c.m.u.d.U.selectByEmail - <==      Total: 1
+16:19:55.407 [http-nio-8801-exec-5] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+16:19:55.409 [http-nio-8801-exec-5] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+16:19:55.903 [http-nio-8801-exec-5] DEBUG c.c.m.u.d.U.selectByEmail - <==      Total: 1
+16:20:02.411 [http-nio-8801-exec-6] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+16:20:02.412 [http-nio-8801-exec-6] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+16:20:02.581 [http-nio-8801-exec-6] DEBUG c.c.m.u.d.U.selectByEmail - <==      Total: 1
+16:20:02.591 [http-nio-8801-exec-6] INFO  c.c.m.u.s.UserServiceImpl - 用户注册异常
+com.coder520.mamabuyuserserver.common.exception.MaMaBuyException: 用户已注册
+	at com.coder520.mamabuyuserserver.user.service.UserServiceImpl.register(UserServiceImpl.java:69)
+	at com.coder520.mamabuyuserserver.user.controller.UserController.register(UserController.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:167)
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:80)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+16:20:02.671 [http-nio-8801-exec-6] INFO  c.c.m.u.s.UserServiceImpl - 2126164600@qq.comhttp-nio-8801-exec-6释放锁
+16:20:08.682 [http-nio-8801-exec-7] DEBUG c.c.m.u.d.U.selectByEmail - ==>  Preparing: select id, uuid, email, password, nickname, mobile, create_time, update_time from t_user where email = ? 
+16:20:08.682 [http-nio-8801-exec-7] DEBUG c.c.m.u.d.U.selectByEmail - ==> Parameters: 2126164600@qq.com(String)
+16:20:08.881 [http-nio-8801-exec-7] DEBUG c.c.m.u.d.U.selectByEmail - <==      Total: 1
